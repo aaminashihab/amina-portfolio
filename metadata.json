@@ -1,0 +1,6 @@
+{
+  "name": "AMINA S Portfolio",
+  "description": "Interactive developer portfolio showcasing AI agent and machine learning projects for AMINA S.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
