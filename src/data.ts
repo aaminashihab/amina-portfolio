@@ -2,6 +2,38 @@ import { ProjectType, TimelineItemType, SkillGroupType } from "./types";
 
 export const projectsData: ProjectType[] = [
   {
+    id: "dubai-expat-agent",
+    title: "Dubai Expat Advisor",
+    emoji: "🇦🇪",
+    description: "An AI-powered relocation companion for expats moving to Dubai. Builds personalized relocation plans covering housing, schooling, visas, and living costs.",
+    detailedDescription: "A full-stack agentic application that uses Gemini to orchestrate tools autonomously. It queries live real estate APIs, computes accurate local costs, and employs an LLM-as-a-Judge pattern to evaluate its own relocation plans before serving them to the user.",
+    architecture: {
+      overview: "A React SPA communicating with a FastAPI backend that orchestrates a Gemini model using custom tools and self-evaluation loops.",
+      flow: [
+        "Ingestion: Receives user profile (budget, family size, preferences) via a structured UI.",
+        "Tool Orchestration: The Gemini agent calls tools like housing_search (Bayut API), visa_advisor, and cost_calculator.",
+        "Self-Evaluation: A secondary Gemini judge grades the drafted plan against the user's initial constraints and outputs a quality score.",
+        "Delivery: The final validated plan is streamed to the frontend."
+      ],
+      challenges: [
+        "Challenge: Ensuring the agent provides accurate real-time rent data.",
+        "Solution: Integrated the RapidAPI Bayut endpoints directly into the agent's toolset.",
+        "Challenge: Measuring if the generated plan actually satisfied the user's complex constraints.",
+        "Solution: Implemented a secondary evaluation pass (LLM-as-Judge) to grade its own output before final delivery."
+      ],
+      metrics: [
+        { label: "Architecture", value: "Agentic Loop" },
+        { label: "External APIs", value: "RapidAPI (Bayut)" },
+        { label: "Deployment", value: "Docker / Render" }
+      ]
+    },
+    tags: ["FastAPI", "React", "Gemini AI", "Agentic Architecture", "Python", "Docker"],
+    githubUrl: "https://github.com/aaminashihab/dubai-expat-agent",
+    articleUrl: "https://dubai-expat-agent.onrender.com",
+    category: "agent",
+    isFlagship: true
+  },
+  {
     id: "motivate-ai",
     title: "MotivateAI",
     emoji: "🧠",
@@ -92,38 +124,6 @@ export const projectsData: ProjectType[] = [
     tags: ["Gemini Partner API", "Streamlit", "Scikit-learn", "Python", "Data Visualization"],
     githubUrl: "https://github.com/aaminashihab",
     category: "dashboard"
-  },
-  {
-    id: "dubai-expat-agent",
-    title: "Dubai Expat Advisor",
-    emoji: "🇦🇪",
-    description: "An AI-powered relocation companion for expats moving to Dubai. Builds personalized relocation plans covering housing, schooling, visas, and living costs.",
-    detailedDescription: "A full-stack agentic application that uses Gemini to orchestrate tools autonomously. It queries live real estate APIs, computes accurate local costs, and employs an LLM-as-a-Judge pattern to evaluate its own relocation plans before serving them to the user.",
-    architecture: {
-      overview: "A React SPA communicating with a FastAPI backend that orchestrates a Gemini model using custom tools and self-evaluation loops.",
-      flow: [
-        "Ingestion: Receives user profile (budget, family size, preferences) via a structured UI.",
-        "Tool Orchestration: The Gemini agent calls tools like housing_search (Bayut API), visa_advisor, and cost_calculator.",
-        "Self-Evaluation: A secondary Gemini judge grades the drafted plan against the user's initial constraints and outputs a quality score.",
-        "Delivery: The final validated plan is streamed to the frontend."
-      ],
-      challenges: [
-        "Challenge: Ensuring the agent provides accurate real-time rent data.",
-        "Solution: Integrated the RapidAPI Bayut endpoints directly into the agent's toolset.",
-        "Challenge: Measuring if the generated plan actually satisfied the user's complex constraints.",
-        "Solution: Implemented a secondary evaluation pass (LLM-as-Judge) to grade its own output before final delivery."
-      ],
-      metrics: [
-        { label: "Architecture", value: "Agentic Loop" },
-        { label: "External APIs", value: "RapidAPI (Bayut)" },
-        { label: "Deployment", value: "Docker / Render" }
-      ]
-    },
-    tags: ["FastAPI", "React", "Gemini AI", "Agentic Architecture", "Python", "Docker"],
-    githubUrl: "https://github.com/aaminashihab/dubai-expat-agent",
-    articleUrl: "https://dubai-expat-agent.onrender.com",
-    category: "agent",
-    isFlagship: true
   }
 ];
 
