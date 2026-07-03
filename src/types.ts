@@ -13,7 +13,7 @@ export interface ProjectType {
   tags: string[];
   githubUrl: string;
   articleUrl?: string;
-  category: "agent" | "prediction" | "dashboard";
+  category: "AI Agent" | "Machine Learning" | "Predictive Analytics" | "Full Stack AI";
   isFlagship?: boolean;
 }
 

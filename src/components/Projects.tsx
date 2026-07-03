@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Github, ExternalLink, Cpu, HardDrive, CheckCircle2, ChevronRight, X } from "lucide-react";
 
 export default function Projects() {
-  const [filter, setFilter] = useState<"all" | "agent" | "prediction" | "dashboard">("all");
+  const [filter, setFilter] = useState<"all" | "AI Agent" | "Machine Learning" | "Predictive Analytics" | "Full Stack AI">("all");
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
 
   const filteredProjects = projectsData.filter((p) => {
@@ -15,9 +15,10 @@ export default function Projects() {
 
   const filterTabs = [
     { label: "All Work", value: "all" as const },
-    { label: "Agentic Systems", value: "agent" as const },
-    { label: "Valuation & ML Models", value: "prediction" as const },
-    { label: "Insights & Dashboards", value: "dashboard" as const }
+    { label: "Full Stack AI", value: "Full Stack AI" as const },
+    { label: "AI Agents", value: "AI Agent" as const },
+    { label: "Machine Learning", value: "Machine Learning" as const },
+    { label: "Predictive Analytics", value: "Predictive Analytics" as const }
   ];
 
   return (
@@ -33,7 +34,7 @@ export default function Projects() {
             Things I've Built
           </h2>
           <p className="text-sm sm:text-base text-neutral-400 max-w-lg leading-relaxed">
-            Real software systems, designed for performance, accuracy, and robust problem validation.
+            A selection of production-oriented AI and machine learning projects.
           </p>
         </div>
 

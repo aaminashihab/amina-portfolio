@@ -5,7 +5,7 @@ export const projectsData: ProjectType[] = [
     id: "dubai-expat-agent",
     title: "Dubai Expat Advisor",
     emoji: "🇦🇪",
-    description: "An AI-powered relocation companion for expats moving to Dubai. Builds personalized relocation plans covering housing, schooling, visas, and living costs.",
+    description: "AI-powered relocation assistant that helps prospective Dubai residents plan housing, schooling, visas, and living costs through a multi-agent workflow.",
     detailedDescription: "A full-stack agentic application that uses Gemini to orchestrate tools autonomously. It queries live real estate APIs, computes accurate local costs, and employs an LLM-as-a-Judge pattern to evaluate its own relocation plans before serving them to the user.",
     architecture: {
       overview: "A React SPA communicating with a FastAPI backend that orchestrates a Gemini model using custom tools and self-evaluation loops.",
@@ -30,14 +30,14 @@ export const projectsData: ProjectType[] = [
     tags: ["FastAPI", "React", "Gemini AI", "Agentic Architecture", "Python", "Docker"],
     githubUrl: "https://github.com/aaminashihab/dubai-expat-agent",
     articleUrl: "https://dubai-expat-agent.onrender.com",
-    category: "agent",
+    category: "Full Stack AI",
     isFlagship: true
   },
   {
     id: "motivate-ai",
     title: "MotivateAI",
     emoji: "🧠",
-    description: "Agentic AI learning coach that combats YouTube distraction during study sessions. Built with a multi-tool agentic architecture, MCP server connections, and prompt injection sanitization.",
+    description: "AI learning coach designed to help students stay focused by organizing study sessions and reducing distractions using an agent-based workflow.",
     detailedDescription: "Designed and built MotivateAI to tackle the core psychological and behavioral issues of digital distraction. Instead of simply blocking websites, the AI agent monitors the user's focus state, translates educational content relative to their goals, and injects motivation context when it intercepts redirection attempts.",
     architecture: {
       overview: "A highly resilient multi-agent system built to act as an active mentor. Uses a shadow controller loop that interacts with a Model Context Protocol (MCP) server representing the user's workspace.",
@@ -62,14 +62,14 @@ export const projectsData: ProjectType[] = [
     tags: ["Gemini 2.0 Flash", "Agentic AI", "Next.js", "MongoDB", "Cloud Run"],
     githubUrl: "https://github.com/aaminashihab/MotivateAI",
     articleUrl: "https://motivateai.hashnode.dev",
-    category: "agent",
+    category: "AI Agent",
     isFlagship: true
   },
   {
     id: "dubai-property",
     title: "Dubai Property AI",
     emoji: "🏘️",
-    description: "Property price prediction model for the Dubai real estate market. XGBoost with SafeTargetEncoder for high-cardinality data, 5-fold cross-validation, and a FastAPI + Streamlit production interface.",
+    description: "Machine learning application for estimating Dubai residential property prices with interactive market analytics and a Gemini-powered data exploration assistant.",
     detailedDescription: "A robust machine learning pipeline engineered to predict transaction valuations across Dubai's highly segmented property market. Solved major data preprocessing challenges related to extremely high-cardinality neighborhood categorical columns.",
     architecture: {
       overview: "A serialized machine learning service powered by a trained XGBoost Regressor, containerized with FastAPI and accessed via an interactive Streamlit dashboard.",
@@ -93,13 +93,13 @@ export const projectsData: ProjectType[] = [
     },
     tags: ["XGBoost", "FastAPI", "Streamlit", "Firebase", "GridSearchCV", "Python"],
     githubUrl: "https://github.com/aaminashihab",
-    category: "prediction"
+    category: "Machine Learning"
   },
   {
     id: "customer-churn",
     title: "Customer Churn Dashboard",
     emoji: "📊",
-    description: "AI-powered churn prediction dashboard combining logistic regression with Gemini for natural language insights. Streamlit frontend with real-time risk scoring and explanations.",
+    description: "Customer churn analytics dashboard featuring interactive risk simulation, batch prediction, and AI-generated customer retention recommendations.",
     detailedDescription: "Bridged the gap between quantitative classification probabilities and practical business decisions. The dashboard predicts which client accounts are at risk, translates the underlying statistical feature weights, and outputs actionable human-readable intervention plans through Gemini.",
     architecture: {
       overview: "An analytical dashboard leveraging Scikit-Learn prediction probability engines and an integrated LLM parser to turn coefficients into interactive client playbooks.",
@@ -123,7 +123,7 @@ export const projectsData: ProjectType[] = [
     },
     tags: ["Gemini Partner API", "Streamlit", "Scikit-learn", "Python", "Data Visualization"],
     githubUrl: "https://github.com/aaminashihab",
-    category: "dashboard"
+    category: "Predictive Analytics"
   }
 ];
 
