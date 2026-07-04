@@ -218,11 +218,11 @@ export const timelineData: TimelineItemType[] = [
     title: "AI Consultant & Product builder",
     subtitle: "Fiverr Freelance & Team Builder",
     period: "Present",
-    description: "Connecting businesses in the UAE, India, and globally with state-of-the-art AI tooling and predictions.",
+    description: "Connecting businesses globally with state-of-the-art AI tooling and predictions.",
     details: [
       "Building practical conversational solutions and agent architectures on Fiverr under client constraints.",
       "Developing accurate valuation frameworks for property investment groups (e.g., Dubai Property AI).",
-      "Proactively pursuing a full-time engineering role within high-velocity tech hubs in the UAE or remotely."
+      "Proactively pursuing full-time remote engineering roles with high-velocity tech teams globally."
     ]
   }
 ];
@@ -241,7 +241,7 @@ export const interviewQuestions = [
     answer: "When mapping neighborhoods and community boundaries in property data, there is immense categorical cardinality. Traditional approaches like One-Hot encoding lead to feature explosions, while naive target encoding overfits the neighborhood average and leaks statistical target signals. I used a custom SafeTargetEncoder which estimates target averages on out-of-fold data with added Laplace smoothing. This ensures that the model learns the underlying sub-community valuation trends without memorizing specific expensive anomalies."
   },
   {
-    question: "Are you open to relocating to the UAE or working in a hybrid setup?",
-    answer: "Yes, absolutely! I am based in Kerala, which is in close geographical and economic proximity to the UAE (just a 4-hour flight with identical trading-partner alignments). I am structured to work fully remote with global teams, and am completely prepared to relocate to Dubai, Abu Dhabi, or work within hybrid structures across the GCC. I hold a valid passport and can adjust to international timezones instantly."
+    question: "Are you open to full-time remote roles?",
+    answer: "Yes, absolutely! I am structured to work fully remote with global teams and have a proven track record of delivering end-to-end AI applications independently. I am highly adaptable, comfortable with asynchronous communication, and can adjust to international timezones instantly to ensure seamless collaboration with any globally distributed team."
   }
 ];

@@ -3,23 +3,23 @@ import { motion } from "motion/react";
 import { MessageSquare, ArrowRight, MapPin, Clock, Compass, Activity } from "lucide-react";
 
 export default function Hero() {
-  const [clocks, setClocks] = useState({ india: "", uae: "" });
+  const [clocks, setClocks] = useState({ india: "", est: "" });
 
   useEffect(() => {
     const updateTime = () => {
       const optionsIndia = { timeZone: "Asia/Kolkata", hour12: true, hour: "2-digit" as const, minute: "2-digit" as const, second: "2-digit" as const };
-      const optionsUAE = { timeZone: "Asia/Dubai", hour12: true, hour: "2-digit" as const, minute: "2-digit" as const, second: "2-digit" as const };
+      const optionsEST = { timeZone: "America/New_York", hour12: true, hour: "2-digit" as const, minute: "2-digit" as const, second: "2-digit" as const };
       
       try {
         setClocks({
           india: new Intl.DateTimeFormat("en-US", optionsIndia).format(new Date()),
-          uae: new Intl.DateTimeFormat("en-US", optionsUAE).format(new Date())
+          est: new Intl.DateTimeFormat("en-US", optionsEST).format(new Date())
         });
       } catch (e) {
         // Fallback
         setClocks({
           india: new Date().toLocaleTimeString(),
-          uae: new Date().toLocaleTimeString()
+          est: new Date().toLocaleTimeString()
         });
       }
     };
@@ -51,7 +51,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent-primary/30 bg-accent-primary/8 text-xs font-semibold text-accent-secondary hover:border-accent-primary/60 transition-colors cursor-default mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-          <span>Available for global remote &amp; UAE roles</span>
+          <span>Available for full-time global remote roles</span>
         </motion.div>
 
         {/* Title */}
@@ -77,7 +77,7 @@ export default function Hero() {
           <span className="text-white font-medium">AI Developer &amp; Product Builder</span>
           <span className="hidden sm:inline text-white/30">•</span>
           <span className="flex items-center gap-1">
-            <MapPin className="w-4 h-4 text-accent-secondary inline" /> Kerala, India / UAE Relocation
+            <MapPin className="w-4 h-4 text-accent-secondary inline" /> Kerala, India (Remote)
           </span>
         </motion.p>
 
@@ -108,8 +108,8 @@ export default function Hero() {
               <span className="font-mono text-white text-[11px] font-bold">{clocks.india || "05:55 PM"}</span>
             </div>
             <div className="bg-bg-inner border border-white/5 px-3 py-1 rounded-md flex flex-col">
-              <span className="text-[10px] text-teal-400 font-sans uppercase tracking-wider font-semibold">UAE GST</span>
-              <span className="font-mono text-white text-[11px] font-bold">{clocks.uae || "04:25 PM"}</span>
+              <span className="text-[10px] text-teal-400 font-sans uppercase tracking-wider font-semibold">US EST</span>
+              <span className="font-mono text-white text-[11px] font-bold">{clocks.est || "08:25 AM"}</span>
             </div>
           </div>
         </motion.div>

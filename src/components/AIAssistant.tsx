@@ -35,7 +35,7 @@ export default function AIAssistant() {
     { label: "Why the UPSC to AI pivot?", query: "Why did you pivot from UPSC civil services to AI Development?" },
     { label: "Tell me about MotivateAI specs", query: "What makes your MotivateAI agentic architecture unique?" },
     { label: "Preventing ML target leakage?", query: "How did you design Dubai Property AI to prevent target data leakage?" },
-    { label: "relocating to the UAE?", query: "Are you open to relocating to the UAE or working in a hybrid setup?" }
+    { label: "Remote work availability?", query: "Are you open to full-time remote roles?" }
   ];
 
   const handleMessageSend = async (text: string) => {
@@ -79,17 +79,17 @@ export default function AIAssistant() {
           responseText = interviewQuestions[1].answer;
         } else if (queryLower.includes("dubai") || queryLower.includes("property") || queryLower.includes("ml") || queryLower.includes("xgboost") || queryLower.includes("leakage") || queryLower.includes("safe")) {
           responseText = interviewQuestions[2].answer;
-        } else if (queryLower.includes("uae") || queryLower.includes("relocate") || queryLower.includes("dubai") || queryLower.includes("remote") || queryLower.includes("hire") || queryLower.includes("availability")) {
+        } else if (queryLower.includes("remote") || queryLower.includes("hire") || queryLower.includes("availability") || queryLower.includes("work")) {
           responseText = interviewQuestions[3].answer;
         } else if (queryLower.includes("skills") || queryLower.includes("tech") || queryLower.includes("experience") || queryLower.includes("build") || queryLower.includes("projects")) {
           responseText = "Amina specializes in modern GenAI (Gemini SDKs, agentic prompts, multi-tool loops, and Model Context Protocol integrations), Python (FastAPI, Scikit-learn, XGBoost), and full-stack rendering (React, Streamlit, MongoDB, Node.js). She builds robust backend APIs and deploys them securely inside Google Cloud Run. Click on the preset buttons above to inspect granular Spec architectures.";
         } else if (queryLower.includes("hello") || queryLower.includes("hi") || queryLower.includes("hey")) {
-          responseText = "Hello! I am Amina's mock resume chatbot assistant. Feel free to probe her portfolio details or ask things like 'why did you pivot from UPSC?', 'what is MotivateAI?', or 'will you work in Dubai?'.";
+          responseText = "Hello! I am Amina's mock resume chatbot assistant. Feel free to probe her portfolio details or ask things like 'why did you pivot from UPSC?', 'what is MotivateAI?', or 'are you open to remote roles?'.";
         } else if (queryLower.includes("contact") || queryLower.includes("email") || queryLower.includes("phone") || queryLower.includes("hire")) {
           responseText = "You can get in touch with Amina directly by emailing aminashiha07@gmail.com, sending a message on LinkedIn, or booking her specialized AI workflow design gigs on Fiverr (Fiverr alias: amina_shihab). Scroll down to the Contact section for quick access links.";
         } else {
           // General Intelligent summary
-          responseText = `That's a great question regarding her portfolio. Amina holds a B.Tech degree in Computer Science, combined with highly rigorous analytical disciplines from her civil services study period. She has shipped three core AI assets: MotivateAI (multi-agent workspace mentor), Dubai Property AI (ML price validation forecasting with out-of-fold target encoding), and Customer Churn Predictor. If you need details on specific architectures or her relocation to UAE timings, please type 'UAE' or 'UPSC' or use the quick access widgets above.`;
+          responseText = `That's a great question regarding her portfolio. Amina holds a B.Tech degree in Computer Science, combined with highly rigorous analytical disciplines from her civil services study period. She has shipped three core AI assets: MotivateAI (multi-agent workspace mentor), Dubai Property AI (ML price validation forecasting with out-of-fold target encoding), and Customer Churn Predictor. If you need details on specific architectures or her remote availability, please type 'remote' or 'UPSC' or use the quick access widgets above.`;
         }
       }
 

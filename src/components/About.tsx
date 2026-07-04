@@ -60,7 +60,7 @@ export default function About() {
               </div>
 
               <p className="text-sm text-neutral-400 font-sans leading-relaxed">
-                Currently, I engineer customized tools as an AI Engineer consultant. I am highly adaptable, hold active timezone compatibility with the UAE and EMEA markets, and can transition into remote or in-house team rosters instantly.
+                Currently, I engineer customized tools as an AI Engineer consultant. I am highly adaptable, hold active timezone compatibility with global remote teams across US, EMEA, and APAC markets, and can transition into remote team rosters instantly.
               </p>
 
               {/* Fiverr / Active indicator */}

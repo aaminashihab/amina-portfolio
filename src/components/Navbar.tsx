@@ -138,7 +138,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
 
           <div className="mt-auto flex justify-between items-center text-xs text-neutral-500 font-mono border-t border-white/5 pt-6">
             <span className="flex items-center gap-1">
-              <Globe className="w-3.5 h-3.5 text-teal-400 animate-pulse" /> Available global / UAE
+              <Globe className="w-3.5 h-3.5 text-teal-400 animate-pulse" /> Available for global remote roles
             </span>
             <span>Amina S. Portfolio</span>
           </div>
