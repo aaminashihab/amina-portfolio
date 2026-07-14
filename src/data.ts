@@ -213,16 +213,16 @@ export const timelineData: TimelineItemType[] = [
     ]
   },
   {
-    id: "freelance",
+    id: "current",
     icon: "🌍",
-    title: "AI Consultant & Product builder",
-    subtitle: "Fiverr Freelance & Team Builder",
+    title: "AI Product Builder",
+    subtitle: "Open Source",
     period: "Present",
-    description: "Connecting businesses globally with state-of-the-art AI tooling and predictions.",
+    description: "Building AI products and Open-source tools focused on LLMs, AI agents and developer productivity",
     details: [
-      "Building practical conversational solutions and agent architectures on Fiverr under client constraints.",
-      "Developing accurate valuation frameworks for property investment groups (e.g., Dubai Property AI).",
-      "Proactively pursuing full-time remote engineering roles with high-velocity tech teams globally."
+      "Built MotivateAI and RepoLens using FastAPI, React, Gemini, and modern AI engineering practices.",
+      "Maintaining open-source AI projects, including a semantic caching library for LLM applications.",
+      "Actively seeking AI engineering and software development opportunities while expanding production-ready AI systems."
     ]
   }
 ];
