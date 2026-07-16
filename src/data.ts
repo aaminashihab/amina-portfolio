@@ -1,38 +1,8 @@
 import { ProjectType, TimelineItemType, SkillGroupType } from "./types";
 
 export const projectsData: ProjectType[] = [
-  {
-    id: "dubai-expat-agent",
-    title: "Dubai Expat Advisor",
-    emoji: "🇦🇪",
-    description: "AI-powered relocation assistant that helps prospective Dubai residents plan housing, schooling, visas, and living costs through a multi-agent workflow.",
-    detailedDescription: "A full-stack agentic application that uses Gemini to orchestrate tools autonomously. It queries live real estate APIs, computes accurate local costs, and employs an LLM-as-a-Judge pattern to evaluate its own relocation plans before serving them to the user.",
-    architecture: {
-      overview: "A React SPA communicating with a FastAPI backend that orchestrates a Gemini model using custom tools and self-evaluation loops.",
-      flow: [
-        "Ingestion: Receives user profile (budget, family size, preferences) via a structured UI.",
-        "Tool Orchestration: The Gemini agent calls tools like housing_search (Bayut API), visa_advisor, and cost_calculator.",
-        "Self-Evaluation: A secondary Gemini judge grades the drafted plan against the user's initial constraints and outputs a quality score.",
-        "Delivery: The final validated plan is streamed to the frontend."
-      ],
-      challenges: [
-        "Challenge: Ensuring the agent provides accurate real-time rent data.",
-        "Solution: Integrated the RapidAPI Bayut endpoints directly into the agent's toolset.",
-        "Challenge: Measuring if the generated plan actually satisfied the user's complex constraints.",
-        "Solution: Implemented a secondary evaluation pass (LLM-as-Judge) to grade its own output before final delivery."
-      ],
-      metrics: [
-        { label: "Architecture", value: "Agentic Loop" },
-        { label: "External APIs", value: "RapidAPI (Bayut)" },
-        { label: "Deployment", value: "Docker / Render" }
-      ]
-    },
-    tags: ["FastAPI", "React", "Gemini AI", "Agentic Architecture", "Python", "Docker"],
-    githubUrl: "https://github.com/aaminashihab/dubai-expat-agent",
-    articleUrl: "https://dubai-expat-agent.onrender.com",
-    category: "Full Stack AI",
-    isFlagship: true
-  },
+  
+  
   {
     id: "motivate-ai",
     title: "MotivateAI",
@@ -65,37 +35,7 @@ export const projectsData: ProjectType[] = [
     category: "AI Agent",
     isFlagship: true
   },
-  {
-    id: "dubai-property",
-    title: "Dubai Property AI",
-    emoji: "🏘️",
-    description: "Machine learning application for estimating Dubai residential property prices with interactive market analytics and a Gemini-powered data exploration assistant.",
-    detailedDescription: "A robust machine learning pipeline engineered to predict transaction valuations across Dubai's highly segmented property market. Solved major data preprocessing challenges related to extremely high-cardinality neighborhood categorical columns.",
-    architecture: {
-      overview: "A serialized machine learning service powered by a trained XGBoost Regressor, containerized with FastAPI and accessed via an interactive Streamlit dashboard.",
-      flow: [
-        "Ingestion: Cleaned and structured 100K+ historical transactional records from open registry sources.",
-        "Feature Engineering: Utilized target encoding with custom prior smoothing (SafeTargetEncoder) on neighborhood variables to prevent direct label leakage.",
-        "Validation: Applied a strict 5-Fold Stratified K-Fold cross-validation strategy.",
-        "Deployment: Serialized the model payload with joblib and hosted on Cloud Run with FastAPI endpoints."
-      ],
-      challenges: [
-        "Challenge: Extreme cardinality in sub-community IDs causing dimensionality explosion in One-Hot Encodings.",
-        "Solution: Created custom Target Encoding with additive noise and smoothing factors.",
-        "Challenge: High variance in luxury villa sales skewing model performance metrics.",
-        "Solution: Applied log1p translation on the target label and optimized absolute error using Huber loss constraints."
-      ],
-      metrics: [
-        { label: "R² Accuracy Scale", value: "94.2%" },
-        { label: "Mean Absolute Error", value: "±4.6%" },
-        { label: "Inference Latency", value: "40ms" }
-      ]
-    },
-    tags: ["XGBoost", "FastAPI", "Streamlit", "Firebase", "GridSearchCV", "Python"],
-    githubUrl: "https://github.com/aaminashihab",
-    category: "Machine Learning"
-  },
-  {
+    {
     id: "customer-churn",
     title: "Customer Churn Dashboard",
     emoji: "📊",
